@@ -12,5 +12,5 @@ elif idade >= 16:
     else:
         print("Entrada não permitida no evento.")
 
-elif idade < 16:
+else:
     print("Entrada não permitida no evento.")
