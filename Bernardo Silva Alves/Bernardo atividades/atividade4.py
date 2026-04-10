@@ -8,17 +8,18 @@ while escolha != 4:
     print("2 - Remover item")
     print("3 - Mostrar inventário")
     print("4 - Sair")
+    print("5 - Alterar quantidade")
 
     escolha = int(input("Escolha uma opção:"))
 
-    if escolha > 4 or escolha < 1:
+    if escolha > 5 or escolha < 1:
         print("Opcão inválida, escolha novamente.")
 
     elif escolha == 1:
         adicionar = input("Digite o nome do item:")
         quantidade = int(input("Digite a quantidade de itens:"))
 
-        item = (adicionar, quantidade)
+        item = [adicionar, quantidade]
 
         lista.append(item)
 
@@ -32,4 +33,15 @@ while escolha != 4:
 
     elif escolha == 3:
         print(lista)
+
+    elif escolha == 5:
+        alterar = input("Digite o nome do item que deseja alterar a quantidade:")
+        remover_quantidade = int(input("Digite a quantidade que deseja remover:"))
+
+        for item_a_remover2 in lista:
+            item_a_remover2
+            if item_a_remover2[0] == alterar:
+                item_a_remover2[1] -= remover_quantidade
+                print("Item removido")
+
 
