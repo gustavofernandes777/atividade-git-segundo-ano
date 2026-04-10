@@ -14,4 +14,4 @@ else:
     if autorizacao == "sim":
         print("Entrada permitida apenas com responsável.")
     else:
-        print("Entrada não permitida no evento.")ss
+        print("Entrada não permitida no evento.")
