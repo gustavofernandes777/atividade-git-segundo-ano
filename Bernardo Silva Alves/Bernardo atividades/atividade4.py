@@ -36,12 +36,12 @@ while escolha != 4:
 
     elif escolha == 5:
         alterar = input("Digite o nome do item que deseja alterar a quantidade:")
-        remover_quantidade = int(input("Digite a quantidade que deseja remover:"))
+        alterar_quantidade = int(input("Digite a quantidade que deseja substituir:"))
 
         for item_a_remover2 in lista:
             item_a_remover2
             if item_a_remover2[0] == alterar:
-                item_a_remover2[1] -= remover_quantidade
-                print("Item removido")
+                item_a_remover2[1] = alterar_quantidade
+                print("Quantidade alterada")
 
 
