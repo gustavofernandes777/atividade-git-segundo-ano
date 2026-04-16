@@ -29,7 +29,7 @@ while True:
         for item in inv:
             quantidade= int(input("Quantidade do intem: "))
             if item [0]==nome:
-                inv[i]=(item,quantidade)                                                            
+                inv[0]=(item,quantidade)                                                            
 
     elif opcão=="5":
         break
