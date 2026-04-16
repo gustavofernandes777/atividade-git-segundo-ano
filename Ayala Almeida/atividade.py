@@ -1,14 +1,35 @@
-idade = int(input("Insira sua idade: "))
-autorizacao = input("Possui autorização dos responsáveis?(sim/não) ")
+inventario = []
+opcao = 0
+while opcao != 4 :
+    print ("\n1 - Adicionar item")
+    print ("2 - Remover item")
+    print("3 - Mostrar inventário")
+    print(" 4 - Sair")
 
-if  idade >= 18:
-    print("Entrada permitida no evento")
+    opcao = int (input("Digite a opcao:"))
+     
+    if opcao == 1 :  
+        nome = input("Nome do item:")
+        quantidade = int(input("Quantidade: "))
+        item = (nome,quantidade)
+        inventario.append(item)
+        print("item adicionado!")
 
-elif idade < 16 and autorizacao == "sim":
-    print("Entrada permitida no evento com a autorização do responsável")
+    elif opcao == 2:
+        nome = input("Nome do item para remover: ")
+        for i in inventario:
+            if i[0] == nome:
+                inventario.remove(i)
+                print("Item removido!")
+                break
 
-elif idade >= 16 and autorizacao == "sim":
-    print("Entrada permitida no evento")
 
-else:
-    print("Entrada negada!")
+    elif opcao == 3:
+        print("\nInventário:")
+        for item in inventario:
+            print(item[0], item [1])
+        
+
+    else :
+        print("Opção inválida")
+
