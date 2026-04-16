@@ -1,4 +1,4 @@
-# Atividade de Programação em Python
+# ATIVIDADE 2
 Uma escola está organizando um evento especial para estudantes. Para participar, o aluno precisa atender a algumas regras.
 
 ## Regras para entrada no evento:
