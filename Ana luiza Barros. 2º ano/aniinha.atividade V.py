@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 lista = []
 
 while True:
@@ -15,3 +16,6 @@ while True:
     print("5 - Sair")
 
     print()
+=======
+
+>>>>>>> 47947f9c3b45d07b1076670e39039e71e52c7d62
