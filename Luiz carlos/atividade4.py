@@ -1,32 +1,46 @@
 print("////// Menu de jogo //////\n")
 
-invent=[]
+invent = []
 a = 0
 
-
-while a != 4:
+while a != 5:
     print("/ 1- Adicionar item /")
     print("/ 2- Remover item /")
-    print("/ 3- Mostrar item /")
-    print("/ 4- Sair /")
-    a = int(input())
-    
-    if(a > 4) or (a < 1):
-        print("Número invalido! Tente novamente!")
-    
+    print("/ 3- Mostrar itens /")
+    print("/ 4- Alterar quantidade do item /")
+    print("/ 5- Sair /")
+
+    a = int(input("Escolha uma opção: "))
+
+    if (a > 5) or (a < 1):
+        print("Número inválido! Tente novamente!")
+
     elif a == 1:
         nome = input("Digite o nome do item: ")
         quant = int(input("Digite a quantidade do item: "))
         item = (nome, quant)
-        invent.append (item)
-    
+        invent.append(item)
+
     elif a == 2:
-        remover = input("Digite o item que queira remover: ")
-       
+        remover = input("Digite o item que deseja remover: ")
         for i in invent:
-            
             if i[0] == remover:
-                invent.remove (i)
-    
+                invent.remove(i)
+                print("Item removido!")
+                break
+
     elif a == 3:
-        print(invent)
+        print("Inventário:", invent)
+
+    elif a == 4:
+        alterar = input("Digite o nome do item que deseja alterar: ")
+        
+        for i in invent:
+            if i[0] == alterar:
+                nova_quant = int(input("Digite a nova quantidade: "))
+                invent.remove(i)
+                invent.append((alterar, nova_quant))
+                print("Quantidade atualizada!")
+                break
+            else:
+                print("Esse item não foi cardartado: ")
