@@ -9,11 +9,13 @@ for i in range (quant_alunos):
  
  soma = 0  
  for i in range (quant_notas): 
- nota = float(input(f"Digite a nota {i+1}:"))  soma += nota 
+    nota = float(input(f"Digite a nota {i+1}:"))  
+    soma += nota 
  
  media = soma / quant_notas 
  if media >= 6: 
- print("Aprovado!") 
+    print("Aprovado!") 
  elif media < 4: 
- print("Reprovado!") 
- else: 
+    print("Reprovado!") 
+else: 
+    print("Recuperação!") 
