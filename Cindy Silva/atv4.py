@@ -1,4 +1,4 @@
-print("---Menu de jogo---")
+rint("---Menu de jogo---")
 inventario = []
 a = 0
 
