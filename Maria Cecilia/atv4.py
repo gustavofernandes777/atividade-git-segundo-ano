@@ -5,8 +5,9 @@ while opcao != 4:
     print("\n1-adicionar item")
     print("2-remover item")
     print("3-mostrar inventário")
-    print("4-sair")
-
+    print("4-alterar nome do item")
+    print("5-sair")
+    
     opcao=int(input("Escolha uma opcao:"))
 
     if opcao == 1:
@@ -32,9 +33,15 @@ while opcao != 4:
         else:
             for item in inventario:
                 print(item[0], "-", item[1])
-
-    elif opcao == 4:
+    elif opcao =="4":
+        nome=input("nome para alterar:")
+        for item in inventario:
+            quantidade=int(input("quantidade para alterar"))
+            if item[0]==nome:
+                inventario[i]=(item,quantidade)
+    elif opcao =="5":
         print("Saindo...")
 
     else:
         print("Opção inválida!")
+        break
