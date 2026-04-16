@@ -1,4 +1,4 @@
-missoes = [None] * 100  # Não soube como começar então o ChatGPT deu a ideia de começar criando um "vetor" com 100 espaços vazios
+missoes = []
 total_missoes = 0
 continuar = True
 
@@ -18,8 +18,10 @@ while continuar:
         nome = input("Nome da missão: ")
         dif = input("Dificuldade (Fácil, Média, Difícil): ")
 
-        if dif == "Fácil" or dif == "fácil" or dif == "Média" or dif == "média" or dif == "Difícil" or dif == "difícil":
-            missoes[total_missoes] = (nome, dif, "Pendente")
+        dificuldades_validas = ["fácil", "facil", "média", "media", "difícil", "dificil"]
+        if dif.lower() in dificuldades_validas:
+            missao = [nome, dif, "Pendente"]
+            missoes.append(missao)
             total_missoes += 1
             print("Missão adicionada!")
         else:
@@ -30,15 +32,13 @@ while continuar:
         nome_busca = input("Nome da missão para remover: ")
         indice_remover = -1
         
-        # Procura a missão pelo nome
         for i in range(total_missoes):
             if missoes[i][0] == nome_busca:
                 indice_remover = i
                 break
         
         if indice_remover != -1:
-            for i in range(indice_remover, total_missoes - 1):
-                missoes[i] = missoes[i+1]
+            missoes.pop(indice_remover)
             total_missoes -= 1
             print("Missão removida!")
         else:
@@ -51,8 +51,7 @@ while continuar:
         
         for i in range(total_missoes):
             if missoes[i][0] == nome_busca:
-                nome_m, dif_m, status_m = missoes[i]
-                missoes[i] = (nome_m, dif_m, "Concluída")
+                missoes[i][2] = "Concluída"
                 encontrou = True
                 print("Status atualizado para Concluída!")
                 break
@@ -72,7 +71,7 @@ while continuar:
         busca_dif = input("Digite a dificuldade para filtrar: ")
         print(f"\n--- MISSÕES {busca_dif.upper()} ---")
         for i in range(total_missoes):
-            if missoes[i][1] == busca_dif:
+            if missoes[i][1].lower() == busca_dif.lower():
                 print(f"- {missoes[i][0]} (Status: {missoes[i][2]})")
 
     # 6. SAIR
