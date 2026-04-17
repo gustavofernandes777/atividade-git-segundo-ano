@@ -1,0 +1,28 @@
+inven =[]
+while True:
+    print("1- adicionar item")
+    print("2- remover item")
+    print("3- mostrar inventario")
+    print("4- alterar nome do item")
+    print("5- sair")
+    op=input("escolha:")
+    if op=="1":
+        nome= input("nome:")
+        qntd=int(input("quantidade:"))
+        inven.append((nome,qntd))
+    elif op=="2":
+        nome=input("nome para remover:")
+        for item in inven:
+            if item[0]==nome:
+                inven.remove(item)
+    elif op== "3":
+        for item in inven:
+            print(item)     
+    elif op=="4":
+        nome=input("nome para alterar:")
+        for item in inven:
+            qntd=int(input("quantidade para alterar"))
+            if item [0]==nome:
+                inven[0]=(item,qntd)
+    elif op== "5":
+        break
