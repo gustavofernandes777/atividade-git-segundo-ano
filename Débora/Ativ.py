@@ -8,9 +8,8 @@ for i in range(alunos):
         nota = float(input("digite a nota:"))
         soma += nota
         media = soma/notas
-        if media >= 10:
+        if media <=10:
             print("aprovado")
-        elif media < 6:
+        elif media <= 6:
             print("reprovado")
-        else:
-            print("recuperação")
+        
