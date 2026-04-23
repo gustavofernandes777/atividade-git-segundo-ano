@@ -1,3 +1,8 @@
+num = (int(input))
+
+
+
+
 # ATIVIDADE 3 
 ## Crie um programa em Python que:
 
