@@ -21,6 +21,7 @@ while a != 6:
         c = 1
         while (c == 1):
             print("Escolha a dificuldade da missão:")
+            print()
             print("1- Fácil")
             print("2- Média")
             print("3- Difícil")
@@ -28,7 +29,7 @@ while a != 6:
 
             if(b<1) or (b>3):
                 print("Dificuldade não encontrada. Tente novamente.")
-                a = 1
+                c = 1
             elif(b == 1):
                     c = 0
                     dificuld = "Fácil"
@@ -39,9 +40,9 @@ while a != 6:
                 c = 0
                 dificuld = "Difícil"
             
-            status = "Pendente"
-            missao = (nome, dificuld, status)
-            lista.append (missao)
+        status = "Pendente"
+        missao = (nome, dificuld, status)
+        lista.append (missao)
 
     elif(a == 2):
         delete = (input("Digite a missão que queira remover: "))
@@ -68,21 +69,52 @@ while a != 6:
                 break
         if not encontrado:
             print("Missão não encontrado!")
+
     elif(a == 4):
         print("---Lista de missões---")
         for i in lista:
             print("Missão:", i[0], "-", i[1], ":", i[2])
 
-    elif (a == 4):
-        alter = (input("Digite o item que queira substituir a quantidade: "))
-        localizado = False
-        for i in invent:
-            if i[0] == alter:
-                novaquant = int(input("Digite a nova quantidade: ")) 
-                invent.remove (i)
-                novoitem = (alter, novaquant)
-                invent.append (novoitem)
-                localizado = True
-                break
-        if not localizado:
-            print("Item não encontrado!")
+    elif (a == 5):
+         c = 1
+         while (c == 1):
+            print("Escolha a dificuldade que deseja visualizar:")
+            print()
+            print("1- Fácil")
+            print("2- Média")
+            print("3- Difícil")
+            b = int(input())
+
+            if(b<1) or (b>3):
+                print("Dificuldade não encontrada. Tente novamente.")
+                c = 1
+            elif(b == 1):
+                    print("---Missões fáceis---")
+                    encontrado = False
+                    c = 0
+                    for i in lista:
+                        if i[1] == "Fácil":
+                            print("Missão:", i[0], "-", i[1], ":", i[2])
+                            encontrado = True
+                    if not encontrado:
+                        print("Nenhuma missão fácil encontrada!")
+            elif(b == 2):
+                encontrado = False
+                print("---Missões médias---")
+                c = 0
+                for i in lista:
+                    if i[1] == "Média":
+                        print("Missão:", i[0], "-", i[1], ":", i[2])
+                        encontrado = True
+                if not encontrado:
+                    print("Nenhuma missão média encontrada!")
+            elif(b == 3):
+                encontrado = False
+                print("---Missões difíceis---")
+                c = 0
+                for i in lista:
+                    if i[1] == "Difícil":
+                        print("Missão:", i[0], "-", i[1], ":", i[2])
+                        encontrado = True
+                if not encontrado:
+                    print("Nenhuma missão difícil encontrada!")
