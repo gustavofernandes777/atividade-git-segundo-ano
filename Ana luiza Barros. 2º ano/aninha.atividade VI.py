@@ -29,21 +29,9 @@ for time in matriz:
         time[1] = 150
 
 for time in matriz:
-    if time[0] == "Palmeiras":
+    if time[0] in ["Palmeiras", "Santos", "São Paulo", "Flamengo"]:
         time[1] -= 10
-
-    time in matriz
-    if time[0] == "Santos":
-        time[1] -= 10
-
-    time in matriz
-    if time[0] == "São Paulo":
-        time[1] -= 10
-
-    time in matriz
-    if time[0] == "Flamengo":
-        time[1] -= 10
-
+    
 matriz_ordenada = sorted(matriz[1:], key=lambda row: row[1], reverse=True)
 
 for posicao, time in enumerate(matriz_ordenada):
