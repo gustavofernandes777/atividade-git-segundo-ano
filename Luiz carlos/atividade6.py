@@ -22,6 +22,25 @@ matriz=[
     ["Chapecoense", 8, 11, 1, 5, 5, ["d", "d", "e", "d", "d"]],
     
 ]
-
+matriz.append(["real madrid", 49, 11, 1, 5, 5, ["v", "v", "e", "v", "v"]])
 for time in matriz:
-    print(time)
+    if time[0]  == "Palmeiras":
+       time[1] = 19
+    
+    elif time[0]  == "Flamengo":
+         time[1] = 13
+
+    elif time[0]  == "São Paulo":
+          time[1] = 10
+
+    elif time[0]  == "Santos":
+         time[1] = 3
+
+    elif time[0]  == "Corinthians":
+       time[1] = 150
+    
+matriz_ordenada = sorted(matriz[1:], key = lambda row: row[1], reverse=True)
+
+print(matriz[0])
+for posicao, time in enumerate(matriz_ordenada):
+    print(f"{posicao+1}º {time}")
