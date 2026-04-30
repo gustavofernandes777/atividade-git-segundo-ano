@@ -1,7 +1,7 @@
 matriz = [
 
 
-    ["classificação", "P", "J", "V", "E", "D", "últ. jogos"],
+    ["classificação", "P", "J", "V", "E", "D", "últ. jogos"]
     ["palmeiras", 29, 12, 9, 2, 1, ["v","v","v","e","v"]],
     ["flamengo", 23, 11, 7, 2, 2, ["e","d","v","v","v"]],
     ["fluminense", 23, 12, 7, 2, 3, ["v","v","e","d","v"]],
@@ -21,36 +21,12 @@ matriz = [
     ["cuiaba", 11, 12, 2, 5, 5, ["e","e","d","v","d"]],
     ["goias", 12, 12, 3, 3, 6, ["d","v","d","d","e"]],
     ["america-MG", 10, 12, 2, 4, 6, ["d","d","e","v","d"]],
-    ["juventude", 9, 12, 2, 3, 7, ["d","d","d","e","v"]],
+    ["juventude", 9, 12, 2, 3, 7, ["d","d","d","e","v"]]
 ]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 for time in matriz:
-    print(time)
-
-
+    print(matriz)
 
 
 
