@@ -1,40 +1,45 @@
-matriz=[
-    ["Classificação", "P", "J", "V", "E", "D", "Últ. jogos"],
+tabela = [
+    ["Classificação", "P", "J", "V", "E", "D", "ÚLT. JOGOS"],
     ["Palmeiras", 29, 12, 9, 2, 1, ["v", "v", "v", "e", "v"]],
     ["Flamengo", 23, 11, 7, 2, 2, ["e", "d", "v", "v", "v"]],
-    ["Fluminese", 23, 12, 7, 2, 3, ["v", "v", "e", "d", "v"]],
+    ["Fluminense", 23, 12, 7, 2, 3, ["v", "v", "e", "d", "v"]],
     ["São Paulo", 20, 12, 6, 2, 4, ["d", "e", "v", "d", "d"]],
-    ["Bahia", 20, 11, 6, 2, 3, ["d", "v", "d", "v", "d"]],
+    ["Bahia", 20, 11, 6, 2, 4, ["d", "v", "d", "v", "d"]],
     ["Athletico-PR", 19, 12, 6, 1, 5, ["v", "d", "d", "v", "d"]],
-    ["Coritiba", 19, 12, 5, 4, 3, ["d", "e", "e", "e", "v"]],
+    ["Coritiba", 19, 12, 5, 4, 3, ["d", "e", "e", "e", "d"]],
     ["Bragantino", 17, 12, 5, 2, 5, ["d", "v", "v", "d", "v"]],
     ["Botafogo", 16, 11, 5, 1, 5, ["v", "v", "v", "e", "v"]],
     ["Vasco", 16, 12, 4, 4, 4, ["v", "e", "d", "e", "v"]],
     ["Vitória", 15, 11, 4, 3, 4, ["v", "d", "e", "v", "e"]],
     ["Atlético-MG", 14, 12, 4, 2, 6, ["d", "v", "v", "d", "d"]],
     ["Grêmio", 13, 12, 3, 4, 5, ["d", "d", "e", "e", "d"]],
-    ["Internacional", 13, 12, 3, 4, 5, ["v", "e", "v", "e", "d"]],
+    ["Internacional", 13, 12, 3, 4, 5, ["v", "e", "v", "e", "v"]],
     ["Santos", 13, 12, 3, 4, 5, ["e", "v", "d", "v", "d"]],
     ["Cruzeiro", 13, 12, 3, 4, 5, ["e", "v", "d", "v", "v"]],
     ["Corinthians", 12, 12, 2, 6, 4, ["e", "d", "d", "e", "e"]],
     ["Mirassol", 9, 11, 2, 3, 6, ["d", "d", "d", "d", "v"]],
     ["Remo", 8, 12, 1, 5, 6, ["v", "d", "e", "e", "d"]],
-    ["Chapecoense", 8, 11, 1, 5, 5, ["d", "d", "e", "d", "d"]],
-    
+    ["Chapecoense", 8, 11, 1, 5, 5, ["d", "d", "e", "d", "d"]]   
 ]
-matriz.append(["PSG", 69, 30, 22, 3, 5,["v", "v", "d", "v", "v"]])
-matriz[17][1]= 150
-
-for time in matriz:
-    if time[0]== "Corinthians":
-        time[1]=150
-
-    if time[0] in ["Palmeiras", "Santos", "São Paulo", "Flamengo"]:
-        time[1]-=10
 
 
-matriz_ordenada = sorted(matriz[1:], key=lambda row:row[1], reverse=True)
+tabela.append(["LapaFtb", 67, 12, 9, 2, 1, ["v", "v", "v", "v", "v"]])
 
-print(matriz[0])
-for posicao, time in enumerate (matriz_ordenada):
-    print(f"{posicao+1}º{time}")
+
+for time in tabela:
+    if time[0] == "Corinthians":
+        time[1] = 150
+    if time[0] == "Palmeiras" or time[0] == "Santos" or time[0] == "São Paulo" or time[0] == "Flamengo":
+        time[1] = time[1] - 10
+    print(time)
+
+tabela_nova = sorted(tabela[1:], key=lambda row: row[1], reverse=True)
+
+print(tabela[0])
+for posicao, time in enumerate(tabela_nova):
+        print(f"{posicao+1}º {time}")
+
+
+
+
+    
