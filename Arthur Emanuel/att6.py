@@ -20,5 +20,27 @@ matriz = [
     ["Remo", 8,12,1,5,6,["v","d","e","e","d"]],
     ["Chapecoense", 8,11,1,5,5,["d","d","e","d","d"]]
 ]
+matriz.append(["Arsenal", 73, 34, 22, 7, 5, ["v","v","d","d","v"]])
+matriz.remove(matriz[2])
+
+
 for time in matriz:
-    print(time)
+    if time[0] == "Corinthians":
+        time[1] = 150
+
+    elif time[0] == "Palmeiras":
+        time[1] = 19
+
+    elif time[0] == "Flamengo":
+        time[1] = 13
+    elif time [0] == "São Paulo":
+        time[1] = 10
+    elif time [0] == "Santos":
+        time[1] = 3
+
+matriz_ordenada = sorted(matriz[1:], key = lambda row: row[1], reverse = True)
+ 
+print(matriz[0])
+
+for posicao, time in enumerate(matriz_ordenada):
+    print(f"{posicao+1}º {time}")
