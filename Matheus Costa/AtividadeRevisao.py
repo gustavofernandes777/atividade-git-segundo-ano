@@ -7,7 +7,7 @@ for i in range(quantidade_produtos):
     print(f"\nCadastro do produto {i+1}")
 
     nome = input("Nome do produto: ")
-    preco = float(input("Preço do produto: R$ "))
+    preco = float(input("Preço do produto: "))
     quantidade = int(input("Quantidade em estoque: "))
 
     if quantidade > 50:
@@ -17,19 +17,14 @@ for i in range(quantidade_produtos):
     else:
         situacao = "Estoque Baixo"
 
-    # Lista com os dados do produto
     produto = [nome, preco, quantidade, situacao]
-
-    # Adicionando produto na matriz
+    
     estoque.append(produto)
 
-# Relatório Final
-print("\n===== RELATÓRIO FINAL =====")
+print("\nRELATÓRIO")
 
 for produto in estoque:
-    print(f"""
-Nome do produto: {produto[0]}
-Preço: R$ {produto[1]:.2f}
-Quantidade: {produto[2]}
-Situação: {produto[3]}
-""")
+    print(f"\nProduto: {produto[0]}")
+    print(f"Preço: R$ {produto[1]:.2f}")
+    print(f"Quantidade: {produto[2]}")
+    print(f"Situação: {produto[3]}")
