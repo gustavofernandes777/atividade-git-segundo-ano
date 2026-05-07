@@ -35,6 +35,21 @@ for time in matriz:
 
 matriz_ordenada=sorted(matriz[1:],key=lambda row:row[1],reverse=True)
 
-print(matriz[0])
+for posicao,time in enumerate(matriz_ordenada):
+    if posicao==0:
+        status="Campeão"
+    elif posicao>=1 and posicao <=5:
+        status="Libertadores"
+    elif posicao>=6 and posicao <=14:
+        status= "Sulamericana"
+    else:
+        status="Rebaixados"
+
+    time.append(status)
+
+print(matriz[0]+["STATUS"])
+
+print("-"*100)
+
 for posicao,time in enumerate(matriz_ordenada):
     print(f"{posicao+1}º{time}")
