@@ -1,4 +1,4 @@
-matriz = [
+tabela = [
     ["Classificação", "P", "J", "V", "E", "D", "ÚLT. JOGOS"],
     ["Palmeiras", 29, 12, 9, 2, 1, ["v", "v", "v", "e", "v"]],
     ["Flamengo", 23, 11, 7, 2, 2, ["e", "d", "v", "v", "v"]],
@@ -22,23 +22,34 @@ matriz = [
     ["Chapecoense", 8, 11, 1, 5, 5, ["d", "d", "e", "d", "d"]]
 ]
 
-matriz.append(["Real Madrid", 78, 11, 1, 1, 1, ["v", "v", "v", "v", "v"]])
+tabela.append(["LapaFtb", 67, 12, 9, 2, 1, ["v", "v", "v", "v", "v"]])
 
-for time in matriz:
-    if time[0] == "Corinthians.":
+for time in tabela:
+    if time[0] == "Corinthians":
         time[1] = 150
-    elif time[0] == "Palmeiras.":
-        time[1] = 19
-    elif time[0] == "Flamengo.":
-        time[1] = 13
-    elif time[0] == "São Paulo.":
-        time[1] = 10
-    elif time[0] == "Santos.":
-        time[1] = 3
 
-matriz_ordenada = sorted(matriz[1:], key=lambda row: row[1], reverse=True)
+    if (
+        time[0] == "Palmeiras"
+        or time[0] == "Santos"
+        or time[0] == "São Paulo"
+        or time[0] == "Flamengo"
+    ):
+        time[1] -= 10
 
-print(matriz[0])
+tabela_nova = sorted(tabela[1:], key=lambda row: row[1], reverse=True)
 
-for posicao, time in enumerate(matriz_ordenada):
-    print(f"{posicao+1}º {time}")
+print(tabela[0])
+
+for posicao, time in enumerate(tabela_nova):
+    pos = posicao + 1
+
+    if pos == 1:
+        situacao = "Campeão"
+    elif 2 <= pos <= 6:
+        situacao = "Libertadores"
+    elif 7 <= pos <= 15:
+        situacao = "Sulamericana"
+    else:
+        situacao = "Rebaixado"
+
+    print(f"{pos}º - {time} - {situacao}")

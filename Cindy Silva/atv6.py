@@ -1,4 +1,4 @@
-matriz = [
+tabela = [
     ["Classificação", "P", "J", "V", "E", "D", "ÚLT. JOGOS"],
     ["Palmeiras", 29, 12, 9, 2, 1, ["v", "v", "v", "e", "v"]],
     ["Flamengo", 23, 11, 7, 2, 2, ["e", "d", "v", "v", "v"]],
@@ -19,26 +19,27 @@ matriz = [
     ["Corinthians", 12, 12, 2, 6, 4, ["e", "d", "d", "e", "e"]],
     ["Mirassol", 9, 11, 2, 3, 6, ["d", "d", "d", "d", "v"]],
     ["Remo", 8, 12, 1, 5, 6, ["v", "d", "e", "e", "d"]],
-    ["Chapecoense", 8, 11, 1, 5, 5, ["d", "d", "e", "d", "d"]]
+    ["Chapecoense", 8, 11, 1, 5, 5, ["d", "d", "e", "d", "d"]]   
 ]
 
-matriz.append(["Real Madrid", 78, 11, 1, 1, 1, ["v", "v", "v", "v", "v"]])
 
-for time in matriz:
-    if time[0] == "Corinthians.":
+tabela.append(["LapaFtb", 67, 12, 9, 2, 1, ["v", "v", "v", "v", "v"]])
+
+
+for time in tabela:
+    if time[0] == "Corinthians":
         time[1] = 150
-    elif time[0] == "Palmeiras.":
-        time[1] = 19
-    elif time[0] == "Flamengo.":
-        time[1] = 13
-    elif time[0] == "São Paulo.":
-        time[1] = 10
-    elif time[0] == "Santos.":
-        time[1] = 3
+    if time[0] == "Palmeiras" or time[0] == "Santos" or time[0] == "São Paulo" or time[0] == "Flamengo":
+        time[1] = time[1] - 10
+    print(time)
 
-matriz_ordenada = sorted(matriz[1:], key=lambda row: row[1], reverse=True)
+tabela_nova = sorted(tabela[1:], key=lambda row: row[1], reverse=True)
 
-print(matriz[0])
+print(tabela[0])
+for posicao, time in enumerate(tabela_nova):
+        print(f"{posicao+1}º {time}")
 
-for posicao, time in enumerate(matriz_ordenada):
-    print(f"{posicao+1}º {time}")
+
+
+
+    

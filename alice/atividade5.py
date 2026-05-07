@@ -15,7 +15,7 @@ while True:
         
         if dif == "Fácil" or dif == "Média" or dif == "Díficil":
             missoes.append([ nome, dif, "pendente"])
-        else
+        else:
             print("Dificuldade inválida")
             
     elif op == "2":
