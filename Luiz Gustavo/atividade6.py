@@ -43,4 +43,13 @@ matriz_ordenada = sorted(matriz[1:], key=lambda row: row[1], reverse=True)
 print(matriz[0])
 
 for posicao, time in enumerate(matriz_ordenada):
-    print(f"{posicao+1}º {time}")
+    if posicao == 0:
+        print(f"Campeão {posicao+1}º {time}")
+    elif posicao in [1, 2, 3, 4, 5]:
+        print(f"Libertadores {posicao+1}º {time}")
+    elif posicao in [6, 7, 8, 9, 10, 11, 12, 13, 14]:
+        print(f"Sulamericana {posicao+1}º {time}")
+    elif posicao in [15, 16]:
+        print(f"Permanência {posicao+1}º {time}")
+    elif posicao in [17, 18, 19, 20]:
+        print(f"Rebaixamento {posicao+1}º {time}")

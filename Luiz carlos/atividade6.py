@@ -1,5 +1,5 @@
 matriz=[
-    ["Classificação", "P", "J", "V", "E", "D", "Últ. jogos"],
+    ["Classificação", "P", "J", "V", "E", "D", "Últ. jogos\n"],
     ["Palmeiras", 29, 12, 9, 2, 1, ["v", "v", "v", "e", "v"]],
     ["Flamengo", 23, 11, 7, 2, 2, ["e", "d", "v", "v", "v"]],
     ["Fluminese", 23, 12, 7, 2, 3, ["v", "v", "e", "d", "v"]],
@@ -29,18 +29,33 @@ for time in matriz:
     
     elif time[0]  == "Flamengo":
          time[1] = 13
-
+    
     elif time[0]  == "São Paulo":
           time[1] = 10
-
+    
     elif time[0]  == "Santos":
          time[1] = 3
-
+    
     elif time[0]  == "Corinthians":
        time[1] = 150
-    
+
+
+def classificar(posicao):  
+    if posicao == 1:
+     return "Campeão"
+    elif 2 <= posicao <= 6:
+        return "Libertadores"
+    elif 7 <= posicao <= 15:
+        return "Sul-Americana"
+    elif 16 <= posicao <= 19:
+        return "Rebaixado"
+    else:
+        return "Fora da tabela"
+
+
 matriz_ordenada = sorted(matriz[1:], key = lambda row: row[1], reverse=True)
 
 print(matriz[0])
-for posicao, time in enumerate(matriz_ordenada):
-    print(f"{posicao+1}º {time}")
+for posicao, time in enumerate(matriz_ordenada, start=1):
+    status = classificar(posicao)
+    print(f"{posicao}º {time} → {status}")
