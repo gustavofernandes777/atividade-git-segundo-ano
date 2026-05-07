@@ -1,27 +1,41 @@
-tabela = [
-["Classificação","P","J","V","E","D","Últ. Jogos"],
 
-[1,"Flamengo",[70,38,21,7,10],["v","v","e","v","v"]],
-[2,"Palmeiras",[68,38,20,8,10],["v","e","v","v","d"]],
-[3,"Atlético-MG",[65,38,19,8,11],["v","v","v","e","d"]],
-[4,"São Paulo",[62,38,18,8,12],["e","v","v","d","v"]],
-[5,"Fluminense",[60,38,17,9,12],["v","d","v","e","v"]],
-[6,"Grêmio",[58,38,17,7,14],["v","v","d","e","v"]],
-[7,"Internacional",[56,38,16,8,14],["d","v","e","v","v"]],
-[8,"Athletico-PR",[54,38,15,9,14],["v","e","d","v","e"]],
-[9,"Botafogo",[52,38,15,7,16],["d","v","v","e","d"]],
-[10,"Fortaleza",[50,38,14,8,16],["v","d","e","v","d"]],
-[11,"Corinthians",[48,38,13,9,16],["e","v","d","v","d"]],
-[12,"Cruzeiro",[47,38,13,8,17],["v","d","v","e","d"]],
-[13,"Vasco",[45,38,12,9,17],["d","v","e","d","v"]],
-[14,"Bahia",[44,38,12,8,18],["v","e","d","d","v"]],
-[15,"Santos",[42,38,11,9,18],["d","d","v","e","v"]],
-[16,"Goiás",[40,38,11,7,20],["e","d","v","d","d"]],
-[17,"Coritiba",[38,38,10,8,20],["d","v","d","e","d"]],
-[18,"Cuiabá",[36,38,9,9,20],["d","d","e","v","d"]],
-[19,"América-MG",[34,38,9,7,22],["d","e","d","d","v"]],
-[20,"Juventude",[30,38,8,6,24],["d","d","d","e","d"]]
+matriz=[
+    ["Classificação", "P", "J", "V", "E", "D", "Últ.jogos"],
+    ["Palmeiras",29,12,9,2,1,["v","v","v","e","v"]],
+    ["Flamengo", 23,11,7,2,2,["e","d","v","v","v"]],
+    ["Fluminense", 23,12,7,2,3,["v","v","e","d","v"]],
+    ["São Paulo", 20,12,6,2,4,["d","e","v","d","d"]],
+    ["Bahia", 20,11,6,2,3,["d","v","d","v","d"]],
+    ["Athletico-PR", 19,12,6,1,5,["v","d","d","v","d"]],
+    ["Coritiba", 19,12,5,4,3,["d","e","e","e","v"]],
+    ["Bragantino", 17,12,5,2,5,["d","v","v","d","v"]],
+    ["Botafogo", 16,11,5,1,5,["v","v","v","e","v"]],
+    ["Vasco", 16,12,4,4,4,["v","e","d","e","v"]],
+    ["Vitória", 15,11,4,3,4,["v","d","e","v","e"]],
+    ["Atlético-MG", 14,12,4,2,6,["d","v","v","d","d"]],
+    ["Grêmio", 13,12,3,4,5,["d","d","e","e","d"]],
+    ["Internacional", 13,12,3,4,5,["v","e","v","e","d"]],
+    ["Santos", 13,12,3,4,5,["e","v","d","v","d"]],
+    ["Cruzeiro", 13,12,3,4,5,["e","v","d","v","v"]],
+    ["Corinthias", 12,12,2,6,4,["e","d","d","e","e"]],
+    ["Mirassol", 9,11,2,3,6,["d","d","d","d","v"]],
+    ["Remo", 8,12,1,5,6,["v","d","e","e","d"]],
+    ["Chapecoense", 8,11,1,5,5,["d","d","e","d","d"]],
+    
 ]
 
-for linha in tabela:
-    print(linha)
+matriz.append(["Real Madrid", 84, 38, 26, 6, 6, ["v","v","v","v","v"]])
+matriz.remove(matriz[2])
+
+for time in matriz:
+    if time[0] == "coritinhas":
+        time[1] = 150
+        
+matriz_ordenada = sorted(matriz[1:], key=lambda x: x[1], reverse=True)
+
+print(matriz[0])
+
+for posicao, time in enumerate(matriz_ordenada, start=1):
+    print(f"{posicao}+1 - {time[0]}: {time[1]} pontos")
+    
+
