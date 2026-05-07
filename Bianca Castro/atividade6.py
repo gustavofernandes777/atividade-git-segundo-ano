@@ -61,5 +61,4 @@ for posicao, time in enumerate (matriz_ordenada):
 
     print(f"{posicao + 1} {time}")
 
-    print("\nTERMINEI A ATIVIDADE PROFESSOR")
-
+    
