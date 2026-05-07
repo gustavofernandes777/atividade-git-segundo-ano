@@ -20,23 +20,21 @@ matriz = [
     ["Mirassol", 9, 11, 2, 3, 6, ["d", "d", "d", "d", "v"]],
     ["Remo", 8, 12, 1, 5, 6, ["v", "d", "e", "e", "d"]],
     ["Chapecoense", 8, 11, 1, 5, 5, ["d", "d", "e", "d", "d"]]
-    
 ]
 
 matriz.append(["Real Madrid", 78, 11, 1, 1, 1, ["v", "v", "v", "v", "v"]])
 
 for time in matriz:
-    if time[0] == "Corinthians":
+    if time[0] == "Corinthians.":
         time[1] = 150
-    elif time[0] == "Palmeiras":
+    elif time[0] == "Palmeiras.":
         time[1] = 19
-    elif time[0] == "Flamengo":
+    elif time[0] == "Flamengo.":
         time[1] = 13
-    elif time[0] == "São Paulo":
+    elif time[0] == "São Paulo.":
         time[1] = 10
-    elif time[0] == "Santos":
+    elif time[0] == "Santos.":
         time[1] = 3
-
 
 matriz_ordenada = sorted(matriz[1:], key=lambda row: row[1], reverse=True)
 
