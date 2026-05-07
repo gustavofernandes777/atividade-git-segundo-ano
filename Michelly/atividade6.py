@@ -22,5 +22,19 @@ matriz=[
     ["Chapecoense", 8,11,1,5,5,["d","d","e","d","d"]],
 ]
 
+matriz.append(["Lens",63,30,20,3,7,["d","v","d","v","e"]])
+
+
 for time in matriz:
-    print (time)
+    if time[0]=="Corinthians":
+        time[1]=150
+
+    if time[0] in ["palmeiras","Santos","São Paulo","Flamengo"]:
+        time[1]-=10
+
+
+matriz_ordenada=sorted(matriz[1:],key=lambda row:row[1],reverse=True)
+
+print(matriz[0])
+for posicao,time in enumerate(matriz_ordenada):
+    print(f"{posicao+1}º{time}")
