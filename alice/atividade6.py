@@ -23,5 +23,47 @@ matriz = [
 
 ]
 
+matriz.append(["Real Madrid", 78, 11, 1, 1, 1,["V", "V", "V","V","V"]])
+
+
+matriz[16][1] = 150
+
 for time in matriz:
-    print(time)
+    if time[0] == "Corinthians":
+        time [1] = 150 
+matriz.append(["Barcelona", 78, 11, 1, 1, 1,["V", "V", "V","V","V"]])
+
+for time in matriz:
+    if time[0] == "Plameiras":
+        time[1] -= 10
+        
+for time in matriz:
+    if time[0] == "Sao Paulo":
+        time[1] -= 10
+        
+for time in matriz:
+    if time [0] == "Flamengo":
+        time[1] -= 10
+        
+for time in matriz:
+    if time [0] == "Santos":
+        time[1] -= 10
+        
+matriz_ordenada = sorted(matriz[1:], key=lambda x: x[1], reverse=True)
+
+print(matriz [0])
+for posicao, time in enumerate (matriz_ordenada):
+                 
+ if posicao == 0:
+   time.append("CAMPEÃO")
+ elif posicao >= 1 and posicao <= 5:
+    time.append("LIBERTADORES")
+    
+if posicao >= 6 and posicao <= 17:
+    time.append("SULAMERICANA")
+elif posicao >= 17:
+    time.append("REBAIXADO")
+    
+print(f"{posicao + 1} {time}")
+
+print(f"{posicao + 1}º {time}")

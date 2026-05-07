@@ -1,10 +1,11 @@
-while true:
+while True:
     print("\n1- Adicionar")
     print("2-Remover")
     print("3-Concluir")
     print("4-Listar")
     print("5-Filtra")
     print("6-Sair")
+    
     
     op = input("Escolha: ")
     
@@ -21,7 +22,7 @@ while true:
         nome = input ("Nome: ")
         for m in missoes:
             if m [0] == nome:
-                missoes. remove(m)
+                missoes.remove(m)
                 
     elif op == "3":
         nome = input ("Nome: ")        
