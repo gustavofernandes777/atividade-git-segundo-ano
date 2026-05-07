@@ -15,26 +15,13 @@ matriz=[
     ["Grêmio", 13, 12, 3, 4, 5, ["d", "d", "e", "e", "d"]],
     ["Internacional", 13, 12, 3, 4, 5, ["v", "e", "v", "e", "d"]],
     ["Santos", 13, 12, 3, 4, 5, ["e", "v", "d", "v", "d"]],
-    ["Cruzeiro", 13, 12, 3, 4, 5, ["e", "v", "d", "v", "v"]],
+    ["Cruezeiro", 13, 12, 3, 4, 5, ["e", "v", "d", "v", "v"]],
     ["Corinthians", 12, 12, 2, 6, 4, ["e", "d", "d", "e", "e"]],
     ["Mirassol", 9, 11, 2, 3, 6, ["d", "d", "d", "d", "v"]],
     ["Remo", 8, 12, 1, 5, 6, ["v", "d", "e", "e", "d"]],
     ["Chapecoense", 8, 11, 1, 5, 5, ["d", "d", "e", "d", "d"]],
     
 ]
-matriz.append(["PSG", 69, 30, 22, 3, 5,["v", "v", "d", "v", "v"]])
-matriz[17][1]= 150
 
 for time in matriz:
-    if time[0]== "Corinthians":
-        time[1]=150
-
-    if time[0] in ["Palmeiras", "Santos", "São Paulo", "Flamengo"]:
-        time[1]-=10
-
-
-matriz_ordenada = sorted(matriz[1:], key=lambda row:row[1], reverse=True)
-
-print(matriz[0])
-for posicao, time in enumerate (matriz_ordenada):
-    print(f"{posicao+1}º{time}")
+    print(time)

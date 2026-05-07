@@ -1,5 +1,5 @@
 matriz=[
-    ["Classificação", "P", "J", "V", "E", "D", "Últ. jogos"],
+    ["Classificação", "P", "J", "V", "E", "D", "Últ. jogos\n"],
     ["Palmeiras", 29, 12, 9, 2, 1, ["v", "v", "v", "e", "v"]],
     ["Flamengo", 23, 11, 7, 2, 2, ["e", "d", "v", "v", "v"]],
     ["Fluminese", 23, 12, 7, 2, 3, ["v", "v", "e", "d", "v"]],
@@ -15,26 +15,47 @@ matriz=[
     ["Grêmio", 13, 12, 3, 4, 5, ["d", "d", "e", "e", "d"]],
     ["Internacional", 13, 12, 3, 4, 5, ["v", "e", "v", "e", "d"]],
     ["Santos", 13, 12, 3, 4, 5, ["e", "v", "d", "v", "d"]],
-    ["Cruzeiro", 13, 12, 3, 4, 5, ["e", "v", "d", "v", "v"]],
+    ["Cruezeiro", 13, 12, 3, 4, 5, ["e", "v", "d", "v", "v"]],
     ["Corinthians", 12, 12, 2, 6, 4, ["e", "d", "d", "e", "e"]],
     ["Mirassol", 9, 11, 2, 3, 6, ["d", "d", "d", "d", "v"]],
     ["Remo", 8, 12, 1, 5, 6, ["v", "d", "e", "e", "d"]],
     ["Chapecoense", 8, 11, 1, 5, 5, ["d", "d", "e", "d", "d"]],
     
 ]
-matriz.append(["PSG", 69, 30, 22, 3, 5,["v", "v", "d", "v", "v"]])
-matriz[17][1]= 150
-
+matriz.append(["real madrid", 49, 11, 1, 5, 5, ["v", "v", "e", "v", "v"]])
 for time in matriz:
-    if time[0]== "Corinthians":
-        time[1]=150
+    if time[0]  == "Palmeiras":
+       time[1] = 19
+    
+    elif time[0]  == "Flamengo":
+         time[1] = 13
+    
+    elif time[0]  == "São Paulo":
+          time[1] = 10
+    
+    elif time[0]  == "Santos":
+         time[1] = 3
+    
+    elif time[0]  == "Corinthians":
+       time[1] = 150
 
-    if time[0] in ["Palmeiras", "Santos", "São Paulo", "Flamengo"]:
-        time[1]-=10
+
+def classificar(posicao):  
+    if posicao == 1:
+     return "Campeão"
+    elif 2 <= posicao <= 6:
+        return "Libertadores"
+    elif 7 <= posicao <= 15:
+        return "Sul-Americana"
+    elif 16 <= posicao <= 19:
+        return "Rebaixado"
+    else:
+        return "Fora da tabela"
 
 
-matriz_ordenada = sorted(matriz[1:], key=lambda row:row[1], reverse=True)
+matriz_ordenada = sorted(matriz[1:], key = lambda row: row[1], reverse=True)
 
 print(matriz[0])
-for posicao, time in enumerate (matriz_ordenada):
-    print(f"{posicao+1}º{time}")
+for posicao, time in enumerate(matriz_ordenada, start=1):
+    status = classificar(posicao)
+    print(f"{posicao}º {time} → {status}")
