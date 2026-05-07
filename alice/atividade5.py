@@ -1,4 +1,4 @@
-while true:
+while True:
     print("\n1- Adicionar")
     print("2-Remover")
     print("3-Concluir")
@@ -14,7 +14,7 @@ while true:
         
         if dif == "Fácil" or dif == "Média" or dif == "Díficil":
             missoes.append([ nome, dif, "pendente"])
-        else
+        else:
             print("Dificuldade inválida")
             
     elif op == "2":
