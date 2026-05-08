@@ -1,7 +1,13 @@
-lista = ["arma", "teste"]
+matriz = [
+    [10, "oi"],
+    [100, "Olá"],
+    [1000, "teste"],
+    [10000, ":)"],
+    [100000, ":("]
+]
 
-print("Qual item você quer remover? ")
-rmv = input()
-lista.remove(rmv)
+t = int(input())
 
-print(lista)
+for i in matriz:    
+    if t == i[0]:
+        print(i[1])

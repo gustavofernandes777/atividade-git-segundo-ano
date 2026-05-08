@@ -23,10 +23,7 @@ matriz=[
     
 ]
 
-for time in matriz:
-    print(time)
-
-matriz.append(["Real Madrid", 78, 11, 1, 1, 1, ["v", "V", "v", "v", "v"]]),
+matriz.append(["Real Madrid", 78, 11, 1, 1, 1, ["v", "V", "v", "v", "v"]])
 
 for time in matriz: 
     if time[0] == "Corinthians":
@@ -37,5 +34,20 @@ for time in matriz:
 
 matriz_ordenada = sorted(matriz[1:], key=lambda row: row[1], reverse=True)
 print(matriz[0])
-for posicao, time in enumerate(matriz_ordenada):
-    print(f"{posicao+1} º {time}")
+
+for i, time in enumerate(matriz_ordenada):
+    posicao = i + 1
+
+    if posicao == 1:
+        status = "Campeão"
+
+    elif posicao <= 6:
+        status = "Libertadores"
+
+    elif posicao <= 15:
+        status = "Sul-Americana"
+
+    else:
+        status = "Rebaixado"
+    time.append(status)
+    print(i+1, time)
