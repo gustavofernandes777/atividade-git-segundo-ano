@@ -4,6 +4,10 @@ contas = {}
 tganho = 0
 tcontas = 0
 senha_mestre = 147
+senha_chefe = 0
+senha_cont = 0
+senha_func = 0
+senha_rep = 0
 
 '''while True:
     print("\nEmpresa-doce mágico\n")
@@ -29,11 +33,11 @@ senha_mestre = 147
 
 while True:
     print("\nEmpresa-doce mágico\n")
-    print("1-Repositor")
-    print("2-Funcionário")
-    print("3-Contador")
-    print("4-Chefe")
-    print("5-Cadastro de funcionario")
+    print("1-Cadastro de funcionario")
+    print("2-Repositor")
+    print("3-Funcionário")
+    print("4-Contador")
+    print("5-Chefe")
     print("0-Sair do sistema")
 
     pessoa = int(input("Quem deseja acessar o sistema? "))
@@ -48,7 +52,29 @@ while True:
         print("Opção inválida")
         continue
 
-    if senha == 1234 and pessoa == 1:
+    if pessoa == 1:
+        if senha == senha_mestre:
+            print("\nEmpresa-doce mágico\n")
+            print("1-Repositor")
+            print("2-Funcionário")
+            print("3-Contador")
+            print("4-Chefe")
+            print("0-Sair do sistema")
+            pessoa = int(input("Quem deseja acessar o sistema? "))
+            if pessoa == 1:
+                senha_rep = int(input("crie uma senha: "))
+            elif pessoa == 2:
+                senha_func = int(input("crie uma senha: "))
+            elif pessoa == 3:
+                senha_cont = int(input("crie uma senha: "))
+            elif pessoa == 4:
+                senha_chefe = int(input("crie uma senha: "))
+            else:
+                print ("opção inválida")
+                exit()
+        else:
+            print("Acesso negado")
+    elif senha == senha_rep and pessoa == 2:
         while True:
             print("\n--- MENU REPOSITOR ---")
             print("1 - Adicionar novo item")
@@ -78,7 +104,7 @@ while True:
             for nomep, dados in itens.items():
                 print(nomep, "-", dados["quantidade"], "unidades à R$", dados["valor"])
 
-    elif senha == 1233 and pessoa == 2:
+    elif senha == senha_func and pessoa == 3:
         while True:
             print("\n--- MENU FUNCIONÁRIO ---")
             print("1 - Registrar venda")
@@ -118,7 +144,7 @@ while True:
             for nomep, dados in itens.items():
                 print(nomep, "-", dados["quantidade"], "unidades à R$", dados["valor"])
 
-    elif senha == 2000 and pessoa == 3:
+    elif senha == senha_cont and pessoa == 4:
         while True:
             print("\n--- MENU DO CONTADOR ---")
             print("1 - Ver vendas")
@@ -153,7 +179,7 @@ while True:
             else:
                 break
 
-    elif senha == 9999 and pessoa == 4:
+    elif senha == senha_chefe and pessoa == 5:
         while True:
             print("\n--- MENU DO CHEFE ---")
             print("1 - Ver estoque completo")
@@ -186,28 +212,5 @@ while True:
 
             else:
                 break
-    elif pessoa == 5:
-        if senha == senha_mestre:
-            print("\nEmpresa-doce mágico\n")
-            print("1-Repositor")
-            print("2-Funcionário")
-            print("3-Contador")
-            print("4-Chefe")
-            print("0-Sair do sistema")
-            pessoa = int(input("Quem deseja acessar o sistema? "))
-            if pessoa == 1:
-                senha_rep = input("crie uma senha: ")
-            elif pessoa == 2:
-                senha_func = input("crie uma senha: ")
-            elif pessoa == 3:
-                senha_cont = input("crie uma senha: ")
-            elif pessoa == 4:
-                senha_chefe = input("crie uma senha: ")
-            else:
-                print ("opção inválida")
-                exit()
-        else:
-            print("Acesso negado")
-
     else:
         print("Acesso negado")
