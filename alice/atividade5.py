@@ -6,6 +6,7 @@ while True:
     print("5-Filtra")
     print("6-Sair")
     
+    
     op = input("Escolha: ")
     
     if op ==  "1":
@@ -21,7 +22,7 @@ while True:
         nome = input ("Nome: ")
         for m in missoes:
             if m [0] == nome:
-                missoes. remove(m)
+                missoes.remove(m)
                 
     elif op == "3":
         nome = input ("Nome: ")        
