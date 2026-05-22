@@ -1,7 +1,7 @@
 idade = int(input("Digite a idade do aluno: "))
 autorizacao = input("Possui autorização dos responsáveis? (sim ou não): ")
 
-if idade >=18:
+if idade >= 18:
     print("Entrada permitida.")
 elif idade >= 16 and autorizacao == "sim":
     print("Entrada permitida.")
