@@ -38,6 +38,8 @@ while res != 4:
 
         print("Quantidade total de itens:", total)
         print("Valor total do estoque: R$", valor)
+        print("NOME", "QUANTIDADE", "PREÇO", "SITUAÇÃO")
+        print(matriz)
 
     elif res == 3:
 
@@ -50,5 +52,5 @@ while res != 4:
                 print("\nProduto encontrado:\n")
                 print("Nome:", i[0])
                 print("Quantidade:", i[1])
-                print("Preço:", i[2])
+                print("Preço: R$", i[2])
                 print("Situação:", i[3])
