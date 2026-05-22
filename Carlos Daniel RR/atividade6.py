@@ -25,6 +25,62 @@ matriz= [
 ]
 
 
-print("--- TABELA DO BRASILEIRÃO 2026 ---")
-for linha in matriz:
-    print(linha)
+for clube in tabela:
+
+    nome = clube[0]
+
+    # Corinthians ganha novos pontos
+    if nome == "Corinthians":
+        clube[1] = 150
+
+    # Alguns times perdem pontos
+    elif nome == "Palmeiras":
+        clube[1] -= 10
+
+    elif nome == "Santos":
+        clube[1] -= 10
+
+    elif nome == "São Paulo":
+        clube[1] -= 10
+
+    elif nome == "Flamengo":
+        clube[1] -= 10
+
+# Nova lista sem o cabeçalho
+classificacao = []
+
+for i in range(1, len(tabela)):
+    classificacao.append(tabela[i])
+
+# Ordena pelos pontos
+classificacao = sorted(
+    classificacao,
+    key=lambda item: item[1],
+    reverse=True
+)
+
+# Mostra cabeçalho
+print(tabela[0])
+
+# Exibe classificação
+contador = 1
+
+for clube in classificacao:
+
+    # Define situação
+    if contador == 1:
+        status = "Campeão"
+
+    elif contador <= 6:
+        status = "Libertadores"
+
+    elif contador <= 15:
+        status = "Sul-Americana"
+
+    else:
+        status = "Rebaixado"
+
+    # Mostra resultado
+    print(f"{contador}º Lugar -> {clube} -> {status}")
+
+    contador += 1

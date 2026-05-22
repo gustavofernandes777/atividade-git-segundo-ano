@@ -3,7 +3,7 @@ matriz = [
     ["Palmeiras",29,12,9,2,1,["v","v","v","e","v"]],
     ["Flamengo",23,11,7,2,2,["e","d","v","v","v"]],
     ["Fluminense",23,12,7,2,3,["v","v","e","d","v"]],
-    ["São paulo",20,12,6,2,4,["d","e","v","d","d"]],
+    ["São Paulo",20,12,6,2,4,["d","e","v","d","d"]],
     ["Bahia",20,11,6,2,3,["d","v","d","v","d"]],
     ["Athletico-PR",19,12,6,1,5,["v","d","d","v","d"]],
     ["Coritiba",19,12,5,4,3,["d","e","e","e","v"]],
@@ -26,12 +26,22 @@ matriz.append(["PSG",23,11,11,5,55,["d","d","e","d","d"]])
 
 for time in matriz:
     if time [0] == "Corinthias":
-        time[1] = 150
+        time[1] = time[1] + 150
     if time[0] == "Palmeiras" or time[0] == "Santos" or time[0] == "São Paulo" or time[0] == "Flamengo":
         time[1] = time[1] - 10
 
 matriz_nova= sorted(matriz[1:], key=lambda row: row[1], reverse=True)
 
-print(matriz[0])
+print(matriz[0] + ["Status"])
 for posicao, time in enumerate(matriz_nova):
+    if posicao == 0:
+        Status = "Campeão"
+    elif posicao >= 1 and posicao <= 5:
+        Status = "Libertadores"
+    elif posicao >= 6 and posicao <= 14:
+        Status = "Sulamericana"
+    else:
+        Status = "Rebaixado"
+
+    time.append(Status)
     print(f"{posicao+1}º {time}")
