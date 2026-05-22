@@ -1,4 +1,4 @@
-# ATIVIDADE 1
+8# ATIVIDADE 1
 Um professor deseja criar um programa que:
 * Peça ao aluno para informar quantas notas deseja cadastrar.
 * Leia todas as notas (valores de 0 a 10).
