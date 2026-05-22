@@ -25,6 +25,41 @@ tabela= [
     ["20 Atlético-GO", 32, 38, 6, 14, 18, ["D", "D", "D", "D", "E"]]
 ]
 
+tabela.append(["Liverpool", 58, 34, 17, 7, 10, ["E", "D", "V", "V", "V"]])
 
-for linha in tabela:
-    print(linha)
+for time in tabela:
+    if time[0] == "Corinthians":
+        time[1] = 150
+
+for time in tabela:
+    if time[0] == "Palmeiras":
+        time[1] -= 10
+
+    if time[0] == "São Paulo":
+        time[1] -= 10
+
+    if time[0] == "Flamengo":
+        time[1] -= 10
+
+tabela_ordenada = sorted(tabela[1:], key=lambda row: row[1], reverse=True)
+
+posicao = 1
+
+for time in tabela_ordenada:
+
+    if posicao == 1:
+        status = "Campeão"
+
+    elif posicao >= 2 and posicao <= 6:
+        status = "Libertadores"
+
+    elif posicao >= 7 and posicao <= 15:
+        status = "Sul-Americana"
+
+    else:
+        status = "Rebaixado"
+
+    time.append(status)
+    posicao += 1
+for posicao, time in enumerate(tabela_ordenada):
+    print(f"{posicao + 1}º lugar -> {time}")
