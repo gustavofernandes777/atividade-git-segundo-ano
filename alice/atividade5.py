@@ -1,3 +1,4 @@
+missoes=[]
 while True:
     print("\n1- Adicionar")
     print("2-Remover")
@@ -7,9 +8,9 @@ while True:
     print("6-Sair")
     
     
-    op = input("Escolha: ")
+    op = int (input("Escolha: "))
     
-    if op ==  "1":
+    if op ==  1:
         nome = input("Nome: ")
         dif = input("Dificuldade: ")
         
@@ -18,27 +19,27 @@ while True:
         else:
             print("Dificuldade inválida")
             
-    elif op == "2":
+    elif op == 2:
         nome = input ("Nome: ")
         for m in missoes:
             if m [0] == nome:
                 missoes.remove(m)
                 
-    elif op == "3":
+    elif op == 3:
         nome = input ("Nome: ")        
         for m in missoes:
             if m [0] == nome:
                 m[2] = "Concluída"
                 
-    elif op == "4":
+    elif op == 4:
         for m in missoes:
             print (m)
             
-    elif op == "5":
+    elif op == 5:
         dif = input("Dificuldade: ")
         for m in missoes:
             if m[1] == dif:
                 print(m)
                 
-    elif op == "6":
+    elif op == 6:
         break
