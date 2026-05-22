@@ -1,9 +1,19 @@
- Peça ao usuário um número inteiro positivo N. # type: ignore
-- Utilize um laço for para analisar todos os números de 1 até N. # type: ignore
-- Para cada número, use condicionais para verificar se ele é: # type: ignore
-    - Par # type: ignore
-    - Ímpar # type: ignore
-- Ao final, o programa deve mostrar: # pyright: ignore
-    - Quantos números pares existem # type: ignore
-    - Quantos números ímpares existem # type: ignore
-    - A soma apenas dos números pares # type: ignore
+
+N = int(input("Digite um número inteiro positivo: "))
+quantidade_pares = 0
+quantidade_impares = 0
+soma_pares = 0
+
+for numero in range(1, N + 1):
+
+   
+    if numero % 2 == 0:
+        quantidade_pares += 1
+        soma_pares += numero
+    else:
+    
+        quantidade_impares += 1
+
+print("Quantidade de números pares:", quantidade_pares)
+print("Quantidade de números ímpares:", quantidade_impares)
+print("Soma dos números pares:", soma_pares)
