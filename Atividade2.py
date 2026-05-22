@@ -1,26 +1,18 @@
-qdtnotas = int(input ("Quantas notas você quer cadastrar?"))
+alunos = int(input("Quantos alunos deseja cadastrar? "))
+notas = int(input("Quantas notas para cada aluno deseja cadatrar? "))
 
-alunos = int(input("Quantos alunos você quer cadastrar?"))
 
-for item in range(alunos):
-    nome = input("Digite o nome do aluno:")
+for i in range(alunos):
+    soma = 0
+    nome = input("Insira o nome do aluno: ")
+    for nota in range(notas):
+        nota = int(input("Digite a nota: "))
+        soma+=nota
+    media = soma/notas
 
-soma=0 
-
-for i in range(qdtnotas):
-
-    nota = float (input("Digite a nota:"))
-    soma += nota
-    media = soma / qdtnotas
-
-if media >= 6:
-    print("Aprovado")
-    print("A média do aluno é:", media)
-
-elif media <= 4:
-    print("Reprovado")
-    print("A média do aluno é: ", media)
-
-else:
-    print("Recuperação")
-    print("A média do aluno é: ", media)
+    if media>=6:
+        print(f"Média = {media} Aluno aprovado!")
+    elif media<4:
+        print(f"Média = {media} Reprovado")
+    else:
+        print(f"Média = {media}Recuperação")

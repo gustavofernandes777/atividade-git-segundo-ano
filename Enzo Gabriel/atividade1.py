@@ -20,3 +20,4 @@ for aluno in range(alunos):
         print("Aprovado")
     else:
         print("Recuperacao")
+0   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '   '
