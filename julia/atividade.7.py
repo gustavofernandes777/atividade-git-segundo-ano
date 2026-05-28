@@ -1,10 +1,10 @@
 matriz = [
     ["Classificação", "P", "J", "V", "E", "D", "úLT. JOGOS"],
     ["Palmeiras", 29,   12, 9,  2, 1, ["v", "v", "v", "e", "v"]],
-    ["Flamengo", 23,   11, 7,  2, 2, ["e", "d", "v", "v", "v"] ],
+    ["Flamengo", 23,    11, 7,  2, 2, ["e", "d", "v", "v", "v"] ],
     ["Fluminense", 23, 12, 7,   2, 3, ["v", "v", "e", "d", "v"]],
     ["São Paulo", 20,   12, 6,  2,  4, ["d", "e", "v", "d", "d"]],
-    ["Bahia", 20,  11, 6,  2,  3, ["d", "v", "d", "v", "d"]],
+    ["Bahia", 20,   11, 6,  2,  3, ["d", "v", "d", "v", "d"]],
     ["Athetico-PR", 19, 12, 6,  1,  5, ["v", "d", "d", "v", "d"]],
     ["Coritiba", 19,    12, 5,  4,  3, ["d", "e", "e", "e", "v"]],    
     ["Bragantino", 17,  12, 5,  2,  5, ["d", "v", "v", "d", "v"]],
@@ -18,11 +18,9 @@ matriz = [
     ["Cruzeiro", 13, 12,  3,   4,   5,["e", "v", "d", "v", "v"]],  
     ["Corinthians", 12, 12,  2,   6,   4, ["e", "d", "d", "e", "e"]],
     ["Mirassol", 9,  11,  2,   3,   6, ["d", "d", "d", "d", "e"]],  
-    ["Remo", 8,  12,  1,   5,   6, ["v", "d", "e", "e", "v"]],
+    ["Remo", 8,  12,  1,   5,   6, ["v", "d", "e", "e", "v"]],  
     ["Chapecoense", 8,  11,  1,   5,   5, ["d", "d", "e", "d", "d"]]  
 ]
-
-
 matriz.append(["Ponte preta", 19, 10, 5, 4, 3, ["v", "v", "e", "d", "d"]])
 
 for time in matriz:
@@ -45,10 +43,3 @@ for posicao, time in enumerate(matriz_ordenada):
 print (matriz[0])
 for posicao, time in enumerate (matriz_ordenada, start=1):
     print(f"{posicao}º {time}")
-
-
-        
-
- 
-
-

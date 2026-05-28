@@ -1,3 +1,4 @@
+
 matriz=[
     ["Classificação", "P", "J", "V", "E", "D", "Últ.jogos"],
     ["Palmeiras",29,12,9,2,1,["v","v","v","e","v"]],
@@ -22,34 +23,16 @@ matriz=[
     ["Chapecoense", 8,11,1,5,5,["d","d","e","d","d"]],
 ]
 
-matriz.append(["Lens",63,30,20,3,7,["d","v","d","v","e"]])
-
+matriz.append(["Real Madrid", 78, 11, 1, 1, 1, ["v", "v", "v", "v",]])
+matriz.remove(matriz[2])
 
 for time in matriz:
-    if time[0]=="Corinthians":
-        time[1]=150
+    for time[0] == "flamengo":
+        time[1] = 150
+        
+matriz_ordenada = sorted(matriz[1:], key=lambda row: row[1], reverse=True)
 
-    if time[0] in ["palmeiras","Santos","São Paulo","Flamengo"]:
-        time[1]-=10
+print(matriz[0])
 
-
-matriz_ordenada=sorted(matriz[1:],key=lambda row:row[1],reverse=True)
-
-for posicao,time in enumerate(matriz_ordenada):
-    if posicao==0:
-        status="Campeão"
-    elif posicao>=1 and posicao <=5:
-        status="Libertadores"
-    elif posicao>=6 and posicao <=14:
-        status= "Sulamericana"
-    else:
-        status="Rebaixados"
-
-    time.append(status)
-
-print(matriz[0]+["STATUS"])
-
-print("-"*100)
-
-for posicao,time in enumerate(matriz_ordenada):
-    print(f"{posicao+1}º{time}")
+for posicao, time in enumerate(matriz_ordenada):
+    print(f"{posicao+1}º {time}")
