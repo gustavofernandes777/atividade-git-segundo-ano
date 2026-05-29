@@ -10,7 +10,7 @@ while True:
 
     opcao = input("Escolha uma opção: ")
 
-    # ADICIONAR
+
     if opcao == "1":
         nome = input("Nome da missão: ")
         dificuldade = input("Dificuldade (Fácil, Média, Difícil): ")

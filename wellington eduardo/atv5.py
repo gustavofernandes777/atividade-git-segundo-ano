@@ -21,7 +21,7 @@ matriz=[
     ["Remo", 8,12,1,5,6,["v","d","e","e","d"]],
     ["Chapecoense", 8,11,1,5,5,["d","d","e","d","d"]],
 ]
-
+ 
 
 for time in matriz:
     if time[0].lower() == "flamengo":

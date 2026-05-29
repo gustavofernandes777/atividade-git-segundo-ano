@@ -12,4 +12,4 @@ for i in range(1, Numero + 1):
        impar = impar + 1
 print(f"Quantos números pares existem", par)
 print(f"Quantos números ímpares existem", impar)
-print(f"Soma de todos os numero pares é: ", soma)  
+print(f"Soma de todos os numero pares é: ", soma)   

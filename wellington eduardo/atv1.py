@@ -8,7 +8,7 @@ for i in range(n):
         nota = float(input(f"Digite a {i+1}ª nota (0 a 10): "))
         if nota < 0 or nota > 10:
             print("Nota inválida! Tente novamente.")
-    notas.append(nota)
+    notas.append(nota) 
 
 media = sum(notas) / n
 
