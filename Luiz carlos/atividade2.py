@@ -1,22 +1,26 @@
-alunos = int(input("insira a quantidade de alunos: "))
-notas = int(input("insira a quantidade de notas: "))
+alunos = int(input("Insira a quantidade de alunos: "))
+notas = int(input("Insira a quantidade de notas: "))
 
 for i in range(alunos):
     soma = 0
-    print("Digite o nome do aluno: ")
-    nome = input()
-    
-    for nota in range(notas):
-        print("insira a nota do aluno: ")
-        nota = float(input())
+    nome = input("\nDigite o nome do aluno: ")
+
+    for j in range(notas):
+        nota = -1 
+        for tentativa in range(100):
+            nota = float(input(f"Insira a nota {j+1} do aluno {nome}: "))
+            if 0 <= nota <= 10:
+                break
+            elif nota < 0 or nota > 10:
+                print("Nota inválida! Digite um valor entre 0 e 10.")
         soma += nota
-    media = soma/notas
-    
+
+    media = soma / notas
+    print(f"Média do aluno {nome}: {media:.2f}")
+
     if media >= 6:
-        print("aluno aprovado.")
-    
-    elif media < 6 and media >= 4:
-        print("Recuperação.")
-    
+        print("Aluno aprovado.\n")
+    elif media >= 4:
+        print("Recuperação.\n")
     elif media < 4:
-        print ("Reprovado.")
+        print("Reprovado.\n")
