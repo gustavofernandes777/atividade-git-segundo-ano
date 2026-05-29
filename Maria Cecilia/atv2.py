@@ -5,8 +5,8 @@ for i in range(alunos):
         soma = 0
         nome = (input(f"Digite o nome do aluno {i+1}: "))
         for f in range(notas):
-                note = float(input(f"Digite a nota {f+1}: "))
-                soma = soma + note
+                nota = float(input(f"Digite a nota {f+1}: "))
+                soma = soma + nota
         media = soma/notas
         print(f"A média do aluno {nome} é: {media:.2f}")
         if media >= 7:

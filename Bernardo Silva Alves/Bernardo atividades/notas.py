@@ -21,7 +21,7 @@ for nota in range (qtd):
 
         break
 
-media = nota / div
+media = notas / div
 
 if media >= 7:
     print("Aprovado")

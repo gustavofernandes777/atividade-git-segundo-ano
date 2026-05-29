@@ -39,23 +39,24 @@ for time in matriz:
     elif time[0]  == "Corinthians":
        time[1] = 150
 
-
-def classificar(posicao):  
-    if posicao == 1:
-     return "Campeão"
-    elif 2 <= posicao <= 6:
-        return "Libertadores"
-    elif 7 <= posicao <= 15:
-        return "Sul-Americana"
-    elif 16 <= posicao <= 19:
-        return "Rebaixado"
-    else:
-        return "Fora da tabela"
-
-
 matriz_ordenada = sorted(matriz[1:], key = lambda row: row[1], reverse=True)
 
 print(matriz[0])
 for posicao, time in enumerate(matriz_ordenada, start=1):
-    status = classificar(posicao)
+
+    if posicao == 1:
+        status = "Campeão"
+
+    elif 2 <= posicao <= 6:
+        status = "Libertadores"
+
+    elif 7 <= posicao <= 15:
+        status = "Sul-Americana"
+
+    elif 16 <= posicao <= 19:
+        status = "Rebaixado"
+
+    else:
+        status = "Fora da tabela"
+
     print(f"{posicao}º {time} → {status}")
