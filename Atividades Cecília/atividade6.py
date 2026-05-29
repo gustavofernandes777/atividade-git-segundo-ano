@@ -51,5 +51,5 @@ print(matriz[0]+["STATUS"])
 print("-"*100)
 
 
-for posicao, time in enumerate (matriz_ordenada):
+for posicao, time in enumerate(matriz_ordenada):
     print(f"{posicao+1}º{time}")

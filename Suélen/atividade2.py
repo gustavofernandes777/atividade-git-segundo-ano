@@ -1,18 +1,18 @@
-qntnotas= int(input("Quantidade de notas: "))
-alunos= int (input("Quantidade de alunos cadastrado: "))
-for item in range (alunos):
-    nome= input("Insira nome do aluno: ")
-    soma=0
-    for item in range (qntnotas):
-     notas = float(input("Insira nota: "))
-     soma+=notas
-media= soma/qntnotas
-if media>=6:
-    print ("aprovado")
-    print("a média do aluno é: ", media)
-elif media <=4:
-    print ("reprovado")
-    print ("a media do aluno é: ", media)
-else:
-    print ("recuperação")
-    print (" a media do aluno é: ", media)
+alunos = int(input("Quantos alunos deseja cadastrar? "))
+notas = int(input("Quantas notas para cada aluno deseja cadatrar? "))
+
+
+for i in range(alunos):
+    soma = 0
+    nome = input("Insira o nome do aluno: ")
+    for nota in range(notas):
+        nota = int(input("Digite a nota: "))
+        soma+=nota
+    media = soma/notas
+
+    if media>=6:
+        print(f"Média = {media :.1f} \nAluno aprovado!")
+    elif media<4:
+        print(f"Média = {media :.1f} \nReprovado")
+    else:
+        print(f"Média = {media :.1f} \nRecuperação")
