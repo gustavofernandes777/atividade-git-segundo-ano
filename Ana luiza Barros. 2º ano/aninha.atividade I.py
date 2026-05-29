@@ -12,13 +12,17 @@ for nome in range(aluno):
     print(nome)
 
     for nota in range(notas):
-        nota = int(input("Insira nota: "))
+        nota = float(input("Insira nota: "))
+        while nota < 0 or nota > 10:
+            nota = float(input("Insira nota válida: "))
         soma += nota
         print(soma)
 
     media = soma/notas
 
-    if media >= 6:
+    if media >= 7:
         print("Parabéns meu querido aluno, estás aprovado!")
+    elif media >=5 and media <=6.9:
+        print("Recuperação!")
     else:
         print("Sinto muito, reprovastes. Irás melhor da próxima!")
