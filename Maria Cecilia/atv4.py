@@ -38,7 +38,7 @@ while opcao != 4:
         for item in inventario:
             quantidade=int(input("quantidade para alterar"))
             if item[0]==nome:
-                inventario[i]=(item,quantidade)
+                inventario[0]=(item,quantidade)
     elif opcao =="5":
         print("Saindo...")
 
