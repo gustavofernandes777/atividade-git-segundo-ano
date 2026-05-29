@@ -36,4 +36,21 @@ print(matriz[0])
 for posicao, time in enumerate(matriz_ordenada):
     print(f"{posicao+1}º {time}")
 
-  
+    if posicao == 0:
+       status = "Campeão"
+
+    elif posicao >= 1 and posicao <= 5:
+        status  =  "Libertadores"
+
+    elif posicao >= 6 and posicao <= 14:
+        status = "Sulamericana"
+
+    else:
+        status = "Rebaixado"
+
+    time.append(status)
+
+print(matriz[10])
+
+for posicao, time in enumerate(matriz_ordenada):
+    print(f"{posicao + 1}° Lugar - {time} ")

@@ -5,8 +5,8 @@ while True:
     match op:
         case "1":
             nome = input("Informe o nome da missão: ")
-            dif = input("Dificuldade (Fácil, Média, Difícil): ")
-            if dif not in ["Fácil", "Média", "Difícil"]:
+            dif = input("Dificuldade (facil, media, dificil): ")
+            if dif not in ["facil", "media", "dificil"]:
                 print("Erro!")
             else:
                 missoes.append([nome, dif, "Pendente"])
@@ -37,6 +37,3 @@ while True:
             break
         case _:
             print("Inválido")
-
-
-
