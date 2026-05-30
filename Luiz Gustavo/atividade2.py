@@ -1,16 +1,11 @@
-idade = int(input("Digite sua idade: "))
+idade = int(input("Insira sua idade: "))
+autorizacao = input("Possui autorização dos responsáveis?(sim/não) ")
 
 if idade >= 18:
-    print("Entrada permitida no evento.")
+    print("Entrada permitida no evento")
+
+elif idade >= 16 and autorizacao == "sim":
+    print("Entrada permitida no evento com a autorização do responsável")
 
 else:
-    autorizacao = input("Possui autorização dos responsáveis? (sim/nao): ")
-
-    if idade >= 16 and autorizacao == "sim":
-        print("Entrada permitida no evento.")
-
-    elif idade < 16 and autorizacao == "sim":
-        print("Entrada permitida apenas com responsável.")
-
-    else:
-        print("Entrada não permitida no evento.")
+    print("Entrada negada!")
