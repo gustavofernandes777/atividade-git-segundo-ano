@@ -26,7 +26,7 @@ while True:
     elif decisao == 2:
      nome_missao = (input("Digite o nome da missão que deseja remover:"))
     
-     if lista [0] == nome_missao:
+     if missao [0] == nome_missao:
          lista.remove(nome_missao)
          print(f"A missão {nome_missao} foi removida com sucesso!")
 
