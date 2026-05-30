@@ -1,5 +1,5 @@
+#Atividade 3
 num = int(input("Insira um número inteiro positivo: "))
-
 pares = 0
 impar = 0
 soma = 0
