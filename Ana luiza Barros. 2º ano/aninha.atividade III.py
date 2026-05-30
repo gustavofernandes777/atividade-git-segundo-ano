@@ -5,7 +5,7 @@ impares = 0
 somap = 0 
 somai = 0
 
-for numero in range( numeros+1 ):
+for numero in range(1, numeros+1 ):
 
     if numero % 2 == 0:
       pares +=1
@@ -21,5 +21,7 @@ print()
 
 print(f"A soma dos números impares é: {somai}" )
 print(f"A soma dos números pares é: {somap}" )
+
+
 
 
