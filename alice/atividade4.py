@@ -30,8 +30,7 @@ while True:
 
     elif opcao == "3":
         print("\nInventário:")
-        for item in inventario:
-            print(item[0], "-", item[1])
+        print(inventario)
 
     elif opcao == "4":
         print("Saindo...")

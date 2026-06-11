@@ -1,19 +1,28 @@
-idade= int(input("Olá meu querido (a), por favor, insira sua idade: "))
-print(idade)
+aluno = int(input("Quantos alunos desejas insirir? "))
+print(aluno)
 print()
 
-autorizacao=(input("Possui a autorização do seu responsável? (sim / não):  "))
-print(autorizacao)
+notas = int(input("Quantas notas desejas insirir para cada aluno? "))
+print(notas)
 print()
 
-if idade >= 18:
-   print("Entrada permitida, aproveite muito!")
+for nome in range(aluno):
+    soma = 0
+    nome = (input("Insira o nome do aluno: "))
+    print(nome)
 
-elif idade >= 16 and autorizacao == "sim":
-   print("Entrada permitida, aproveite muito!")
+    for nota in range(notas):
+        nota = float(input("Insira nota: "))
+        while nota < 0 or nota > 10:
+            nota = float(input("Insira nota válida: "))
+        soma += nota
+        print(soma)
 
-elif idade <= 16 and autorizacao == "sim":
-   print("Entrada permitida, mas apenas com seu responsável.")
-   
-else:
-   print("Entrada negada, sinto muito.")
+    media = soma/notas
+
+    if media >= 7:
+        print("Parabéns meu querido aluno, estás aprovado!")
+    elif media >=5 and media <=6.9:
+        print("Recuperação!")
+    else:
+        print("Sinto muito, reprovastes. Irás melhor da próxima!")

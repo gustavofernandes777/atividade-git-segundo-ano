@@ -1,0 +1,79 @@
+missoes = []
+while True:
+    print("\n--- MENU ---")
+    print("1 - Adicionar missão")
+    print("2 - Remover missão")
+    print("3 - Concluir missão")
+    print("4 - Listar missões")
+    print("5 - Mostrar por dificuldade")
+    print("6 - Sair")
+
+    opcao = input("Escolha uma opção: ")
+
+
+    if opcao == "1":
+        nome = input("Nome da missão: ")
+        dificuldade = input("Dificuldade (Fácil, Média, Difícil): ")
+
+        if dificuldade not in ["Fácil", "Média", "Difícil"]:
+            print("Dificuldade inválida!")
+        else:
+            missoes.append([nome, dificuldade, "Pendente"])
+            print("Missão adicionada!")
+
+    elif opcao == "2":
+        nome = input("Nome da missão para remover: ")
+        encontrada = False
+
+        for missao in missoes:
+            if missao[0] == nome:
+                missoes.remove(missao)
+                encontrada = True
+                print("Missão removida!")
+                break
+
+        if not encontrada:
+            print("Missão não encontrada!")
+
+    elif opcao == "3":
+        nome = input("Nome da missão para concluir: ")
+        encontrada = False
+
+        for i, missao in enumerate(missoes):
+            if missao[0] == nome:
+                nova_missao = [missao[0], missao[1], "Concluída"]
+                missoes[i] = nova_missao
+                encontrada = True
+                print("Missão concluída!")
+                break
+
+        if not encontrada:
+            print("Missão não encontrada!")
+
+    elif opcao == "4":
+        print("\n--- MISSÕES ---")
+
+        if len(missoes) == 0:
+            print("Nenhuma missão cadastrada.")
+        else:
+            for missao in missoes:
+                print(missao)
+
+    elif opcao == "5":
+        dificuldade = input("Digite a dificuldade: ")
+
+        if dificuldade not in ["Fácil", "Média", "Difícil"]:
+            print("Dificuldade inválida!")
+        else:
+            print(f"\nMissões {dificuldade}:")
+
+            for missao in missoes:
+                if missao[1] == dificuldade:
+                    print(missao)
+
+    elif opcao == "6":
+        print("Programa encerrado!")
+        break
+
+    else:
+        print("Opção inválida!")

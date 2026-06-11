@@ -1,16 +1,20 @@
-idade = int(input("Digite sua idade:"))
+qdtnotas = int(input ("Quantas notas você quer cadastrar?"))
+alunos = int(input("Quantos alunos você quer cadastrar?"))
+for item in range(alunos):
+    nome_aluno = input("Digite o nome do aluno:")
+    soma=0
+    for i in range(qdtnotas):
+        nota = float(input("Digite a nota:"))
+        soma += nota
+    media = soma / qdtnotas
+    if media >= 6:
+        print("Aprovado")
+        print("A média do aluno é: ", media) 
 
-if idade >= 18:
-    print("Entrada permitida no evento.")
+    elif media <= 4:
+        print("Reprovado")
+        print("A média do aluno é: ", media) 
 
-elif idade >= 16:
-    aut = (input("Você possui a autorização dos responsáveis?"))
-   
-    if aut == "sim":
-        print("Entrada permitida apenas com a autorização dos responsáveis.")
-    
     else:
-        print("Entrada não permitida no evento.")
-
-elif idade < 16:
-    print("Entrada não permitida no evento.")
+        print("Recuperação")
+        print("A média do aluno é: ", media) 
